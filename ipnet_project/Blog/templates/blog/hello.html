@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  <p>
+      <h1>Hello World</h1>
+
+    <p>
+        Nous sommes les étudiants en L2 ; parcours GL,DWM <br>
+        Anné Académique : {{anne_academique}}<br>
+        Nous sommes au nombre de : {{noms| length }}
+    <ul>
+        {% for nom in noms %}
+        <li>{{nom| lower }}</li>
+         {% endfor %}
+    </ul>
+
+
+
+{% endblock %}
+
